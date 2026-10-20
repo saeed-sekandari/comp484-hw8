@@ -9,11 +9,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Footer icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Main navigation -->
+    <nav class="site-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+        <a href="Saeed-Resume.pdf" download>Download Resume</a>
+    </nav>
+
     <!-- Intro -->
-    <header>
+    <header id="home">
         <div class="content-wrap">
             <img class="profile-img column-narrow" src="images/saeed-profile.png" alt="Professional portrait of Saeed Sekandari">
 
@@ -30,7 +43,7 @@
 
     <main>
         <!-- Projects -->
-        <section class="projects">
+        <section class="projects" id="projects">
             <div class="content-wrap">
                 <h2>Projects</h2>
 
@@ -56,8 +69,7 @@
                             <li>Added input validation and connected backend features with the frontend.</li>
                         </ul>
                         <p>
-                            <a href="https://github.com/saeed-sekandari/CinemaCart"
-                               target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/saeed-sekandari/CinemaCart" target="_blank" rel="noopener noreferrer">
                                 View CinemaCart on GitHub
                             </a>
                         </p>
@@ -78,8 +90,7 @@
                             projects I have worked on as I continue growing as a software engineer.
                         </p>
                         <p>
-                            <a href="https://github.com/saeed-sekandari/Portfolio"
-                               target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/saeed-sekandari/Portfolio" target="_blank" rel="noopener noreferrer">
                                 View the portfolio project on GitHub
                             </a>
                         </p>
@@ -89,7 +100,7 @@
         </section>
 
         <!-- Education -->
-        <section class="education">
+        <section class="education" id="education">
             <div class="content-wrap">
                 <h2>Education</h2>
 
@@ -126,15 +137,21 @@
     </main>
 
     <!-- Contact info -->
-    <footer>
+    <footer id="contact">
         <div class="content-wrap">
             <h2>Let's Keep in Touch!</h2>
+
             <div class="contact-info">
-                <a href="https://github.com/saeed-sekandari"
-                   target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://www.linkedin.com/in/saeed-sekandari"
-                   target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/saeed-sekandari" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/saeed-sekandari" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    LinkedIn
+                </a>
             </div>
+
             <p>Copyright 2026 by Saeed Sekandari</p>
         </div>
     </footer>

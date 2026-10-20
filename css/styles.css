@@ -5,16 +5,20 @@
    #FFFFFF - white
 */
 
-/* Global styles */
+/* Page-wide styles */
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     color: #243447;
     background: #F2F5F7;
-    font-family: 'DM Sans', sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-size: 16px;
     line-height: 1.6;
 }
@@ -22,7 +26,7 @@ body {
 h1,
 h2,
 h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
 }
 
 h1 {
@@ -47,7 +51,7 @@ p {
     margin: 8px 0;
 }
 
-/* Content wrapper */
+/* Keeps each section's content at a readable width */
 .content-wrap {
     max-width: 950px;
     margin: 0 auto;
@@ -98,7 +102,7 @@ footer p {
     font-size: 14px;
 }
 
-/* Two-column layout */
+/* Reusable two-column layout */
 .column-narrow {
     width: 30%;
     min-height: 175px;
@@ -113,6 +117,7 @@ footer p {
 }
 
 .profile-img {
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     object-fit: cover;
     object-position: center 35%;
@@ -148,14 +153,55 @@ footer p {
     padding-left: 22px;
 }
 
-/* Education */
+/* The photo stays fixed while the Education section scrolls */
 .education {
-    background: #E6F3F0;
+    color: #FFFFFF;
+    background-color: #142D4E;
+    background-image:
+        linear-gradient(
+            rgba(20, 45, 78, 0.82),
+            rgba(42, 157, 143, 0.72)
+        ),
+        url("../images/education-bg.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.education h2,
+.education h3 {
+    color: #FFFFFF;
+}
+
+.education-item {
+    border-top-color: rgba(255, 255, 255, 0.35);
 }
 
 .education-item .column-narrow,
 .education-item .column-wide {
     min-height: 0;
+}
+
+/* The menu stays at the top while you scroll */
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 8px 12px;
+    background: #142D4E;
+    text-align: center;
+}
+
+.site-nav a {
+    display: inline-block;
+    padding: 10px 14px;
+    color: #FFFFFF;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.site-nav a:hover {
+    color: #8DE0D5;
 }
 
 /* Smaller screens */
@@ -185,5 +231,18 @@ footer p {
         height: 210px;
         margin: 0 auto 24px;
         display: block;
+    }
+
+    .site-nav {
+        padding: 6px;
+    }
+
+    .site-nav a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .education {
+        background-attachment: scroll;
     }
 }
